@@ -24,7 +24,7 @@ class Rest_Api {
      * Constructor
      */
     public function __construct() {
-        $this->register_routes();
+        add_action('rest_api_init', array($this, 'register_routes'));
     }
 
     /**
